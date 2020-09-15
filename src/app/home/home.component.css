@@ -1,0 +1,71 @@
+
+	#logo{
+    	background-color:black;
+        height:40px;
+        width:70px;
+        color:white;
+        padding:0px 10px;
+        box-sizing:border-box;
+        font-size:28px;
+        border-radius:4px;
+        font-weight:300;
+        margin-left:20px;
+        cursor: pointer;
+    }
+    
+    #navbar {
+    	display:flex;
+    	align-items:center;
+    	width:100%;
+       /*  background-color:dodgerblue; */
+        height:50px;
+        justify-content:space-between;
+        box-shadow: 0px 2px 4px grey;
+        margin-bottom: 10px;
+        border-radius:2px;
+        position: sticky;
+        z-index: 3;
+        top: 0;
+        background-image: linear-gradient(to right,#36d1dc , #5b86e5
+        );
+    }
+
+    .dp {
+       /*  padding: 0px 20px; */
+        margin-right: 20px;
+        height: 40px;
+        width: 40px;
+        position: relative;
+        display: inline-block;
+    }
+
+      .dpContent {
+          z-index: 2 !important;
+        display: block;
+        right:30%;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+        border-radius: 2px;
+      }
+      
+      /* .dp:hover .dpContent {
+        display: block;
+      } */
+      #sideNavToggle {
+        display: none;
+      }
+
+      @media only screen and (max-width: 480px) {
+        #sideNavToggle {
+          display: block;
+        }
+    }
+
+   .routeActive{
+     color: green;
+     background-color: lightgrey;
+   }

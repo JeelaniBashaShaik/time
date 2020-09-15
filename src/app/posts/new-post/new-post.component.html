@@ -1,0 +1,28 @@
+<div class="row" style="display: flex;align-items: center">
+    <div class="col s6 m6 l6 xl6">
+        <input type="text"  name="firstname" placeholder="Post something..." [(ngModel)]="newPost">
+    </div>
+    <div class="col s2 m2 l2 xl2">
+        <button style="width:40%;display:flex;justify-content: center" mz-button (click)="sendPost()" [disabled] = "newPost.length == 0"><i mz-icon-mdi [icon]="'send'" [size]="'24px'"></i></button>
+    </div>
+    <div class="col s2 m2 l2 xl2">
+        <input type="file" id="imageUpload" (change)="uploadFile($event, 'image')">
+        <label for="imageUpload" style="cursor:pointer">
+        <i mz-icon-mdi [icon]="'image-outline'" [size]="'36px'"></i>
+    </label>
+    </div>
+    <div class="col s2 m2 l2 xl2">
+        <input type="file" id="videoUpload" (change)="uploadFile($event, 'video')">
+        <label for="videoUpload" style="cursor:pointer">
+        <i mz-icon-mdi [icon]="'video-outline'" [size]="'36px'"></i>
+    </label>
+    </div>
+
+   
+</div>
+<div class="row" *ngIf="imageProgress" style="display: flex;align-items: center">
+    <div class="progress" >
+        <div class="determinate" [style.width.%] = "uploadPercent | async"></div>
+    </div>
+</div>
+

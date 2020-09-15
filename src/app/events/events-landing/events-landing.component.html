@@ -1,0 +1,111 @@
+
+<div  class="cntainer">
+    <div id="eventsLanding" class="row">
+        <div id="newEvent" *ngIf="user && user?.uid !== undefined" class="col s12 m6 l4 xl4">
+        <div style="width:70%;padding:30px;display:flex;flex-direction:column;justify-content: space">
+        <div >
+            <mz-input-container>
+                <input mz-input type="text" maxlength = 20 length="20" name="firstname" placeholder="Title" [(ngModel)]="newEvent.title">
+                </mz-input-container>
+        </div>
+        <div>
+            <mz-select-container>
+                <select mz-select [(ngModel)]="newEvent.eventType" [placeholder]="'Event Type'">
+                 
+                    <option  >Birthday</option>
+                    <option  >Marriage</option>
+            
+                    <option>Anniversary</option>
+                    <option>Others</option>
+           
+                </select>
+              </mz-select-container>
+        </div>
+        <div>
+            <input type="text"  name="firstname" placeholder="Location" [(ngModel)]="newEvent.location">
+        </div>
+        <div>
+            <mz-datepicker-container class="col s12">
+                <i mz-icon-mdi mz-input-prefix
+                [icon]="'calendar'">
+              </i>
+              <input mz-datepicker [(ngModel)]="newEvent.date" [options]="options" (ngModelChange)="pickDate($event)" placeholder="Select event date" type="text">
+            </mz-datepicker-container>
+        </div>
+        <div>
+            <mz-timepicker-container class="col s12">
+                <i mz-icon-mdi mz-input-prefix [icon]="'clock-outline'"></i>
+                <input mz-timepicker placeholder="Time" [(ngModel)]="newEvent.time" type="text">
+              </mz-timepicker-container>
+        </div>
+        <div>
+            <button style="width:40%;display:flex;justify-content: center" [disabled]="isdisabled" mz-button (click)="catchEvent()"><i mz-icon-mdi [icon]="'send'" [size]="'24px'"></i></button>
+        </div>
+          
+      
+        </div>
+        </div>
+        <div id="newEventButton" *ngIf="user && user?.uid !== undefined" style="padding: 0px 10px">
+            <mz-collapsible [mode]="'expandable'" [popout]="false">
+  <mz-collapsible-item>
+    <mz-collapsible-item-header>
+      Create New
+    </mz-collapsible-item-header>
+    <mz-collapsible-item-body>
+        <div>
+                <mz-input-container><input mz-input type="text" maxlength = 20  name="firstname" placeholder="Title" [(ngModel)]="newEvent.title">
+                    </mz-input-container>
+          </div>
+          <div>
+              <mz-select-container>
+                  <select mz-select [(ngModel)]="newEvent.eventType" [placeholder]="'Event Type'">
+                   
+                      <option  >Birthday</option>
+                      <option  >Marriage</option>
+              
+                      <option>Anniversary</option>
+                      <option>Others</option>
+             
+                  </select>
+                </mz-select-container>
+          </div>
+          <div>
+              <input type="text"  name="firstname" placeholder="Location" [(ngModel)]="newEvent.location">
+          </div>
+          <div>
+              <mz-datepicker-container class="col s12">
+                  <i mz-icon-mdi mz-input-prefix
+                  [icon]="'calendar'">
+                </i>
+                <input mz-datepicker [(ngModel)]="newEvent.date" [options]="options" (ngModelChange)="pickDate($event)" placeholder="Select event date" type="text">
+              </mz-datepicker-container>
+          </div>
+          <div>
+              <mz-timepicker-container class="col s12">
+                  <i mz-icon-mdi mz-input-prefix [icon]="'clock-outline'"></i>
+                  <input mz-timepicker placeholder="Time" [(ngModel)]="newEvent.time" type="text">
+                </mz-timepicker-container>
+          </div>
+          <div>
+              <button style="width:40%;display:flex;justify-content: center" mz-button [disabled]="isdisabled" (click)="catchEvent()"><i mz-icon-mdi [icon]="'send'" [size]="'24px'"></i></button>
+          </div>
+    </mz-collapsible-item-body>
+  </mz-collapsible-item>
+</mz-collapsible>
+        </div>
+        <div >
+            <div *ngIf="(events | async)?.length == 0">
+                No Events found. Go ahead and create one !!!
+            </div>
+            <div id= "eventsList">
+                <div *ngFor="let timeEvent of events | async" >
+                   <app-event [timeEvent]="timeEvent"></app-event>
+                </div>
+                </div>
+        </div>
+     <!--    <div class="col s12 m6 l4 xl4">
+
+        </div> -->
+        
+      </div>    
+</div>

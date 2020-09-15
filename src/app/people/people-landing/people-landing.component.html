@@ -1,0 +1,24 @@
+
+<div class="container">
+  <div class="row">
+
+        <div class="col s12 m6 l4 xl4" *ngFor="let user of users | async" >
+            <div  class="card hoverable" style="display: flex;flex-direction: row;;margin:10px 0px;height:10vh;align-items: center">
+              <span><img src={{user.photoURL}} height="62" width="62" style="border-radius:50%;margin-left:20px">  </span>
+              <span style="display:flex;flex-direction:column;margin-left:20px">
+                <span style="font-size: 18px;color:dodgerblue">{{user.displayName}}</span>
+              </span>
+              </div>
+            </div>
+
+  </div>
+</div>
+
+
+
+
+<ng-template #userTemplate let-user="user">
+  <div style="display: flex;flex-direction: row;justify-content: center;align-items: center;height: 15vh;box-shadow: 0px 4px 8px grey">
+    {{user.displayName}}
+  </div>
+</ng-template>

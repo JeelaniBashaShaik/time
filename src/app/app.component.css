@@ -1,0 +1,26 @@
+
+	#logo{
+    	background-color:black;
+        height:40px;
+        width:70px;
+        color:white;
+        padding:0px 10px;
+        box-sizing:border-box;
+        font-size:28px;
+        border-radius:4px;
+        font-weight:300;
+        margin-left:20px;
+        font-family: sans-serif;
+    }
+    
+    #navbar {
+    	display:flex;
+    	align-items:center;
+    	width:100%;
+        background-color:lightgrey;
+        height:50px;
+        justify-content:flex-start;
+        box-shadow: 0px 2px 4px grey;
+        margin-bottom: 10px;
+        border-radius:2px;
+    }

@@ -1,0 +1,48 @@
+
+<div *ngIf="timeEvent.daysLeft > 0" class="card hoverable" style="height:180px;width:350px;" 
+  [ngClass]="{
+    'birthday': timeEvent?.eventType == 'Birthday',
+    'anniversary': timeEvent?.eventType == 'Anniversary',
+    'marriage': timeEvent?.eventType == 'Marriage',
+    'others': timeEvent?.eventType == 'Others' }">
+  <div style="color:white;font-size: 2rem;font-weight:300;padding:10px 0px 0px 10px">{{timeEvent.title}}</div>
+  <div style="display:flex;justify-content:space-evenly">
+    <div>
+      <div *ngIf="timeEvent?.date" style="color:white;padding-left:10px;display: flex;align-items: center">
+        <i mz-icon-mdi mz-input-prefix
+        [icon]="'calendar'" style="margin-right: 10px">
+      </i> {{timeEvent.date}}</div>
+      <div *ngIf="timeEvent?.time" style="color:white;padding-left:10px;display: flex;align-items: center">
+        <i mz-icon-mdi mz-input-prefix
+        [icon]="'clock-outline'" style="margin-right: 10px">
+      </i> {{timeEvent.time}}</div>
+    <div *ngIf="timeEvent?.location" style="color:white;padding-left:10px;display: flex;align-items: center">
+        <i mz-icon-mdi mz-input-prefix [icon]="'map-marker'" style="margin-right: 10px"></i>
+      {{timeEvent.location}}</div>
+    <div>{{timeEvent.postedBy}}</div>
+    </div>
+    <div style="color:white;display: flex;;align-items: flex-end;padding-right:00px">
+      <span style="font-size:5rem;font-weight:300;">{{timeEvent.daysLeft}}</span>
+      <span>days left</span>
+      </div>
+  </div>
+  <div>
+   
+  </div>
+ 
+ 
+</div>
+
+<!-- <div class="card hoverable" style="height:200px;width:350px;" [ngClass]="{'marriage':event?.eventType == 'Birthday'}">
+
+  </div>
+
+  <div class="card hoverable" style="height:200px;width:350px;" [ngClass]="{'anniversary':event?.eventType == 'Birthday'}">
+
+    </div>
+
+    <div class="card hoverable" style="height:200px;width:350px;" [ngClass]="{'others':event?.eventType == 'Birthday'}">
+
+      </div>
+     -->
+  

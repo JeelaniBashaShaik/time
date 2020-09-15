@@ -1,0 +1,101 @@
+{
+  "configVersion": 1,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/4.143e26e35ad9ee3c4967.js",
+        "/5.57e20310c6026e05f6eb.js",
+        "/6.346acc39d23f51963026.js",
+        "/7.27528f60b1e54ef2d0a2.js",
+        "/favicon.ico",
+        "/firebase-messaging-sw.js",
+        "/index.html",
+        "/main.17fe2cb3c2e9dfb032d1.js",
+        "/polyfills.c6871e56cb80756a5498.js",
+        "/runtime.d6e54c2710348ceb1ce8.js",
+        "/scripts.dfe17c794d5054cc4112.js",
+        "/styles.907c49ed899b641b03f8.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/bean.png",
+        "/assets/bean1.png",
+        "/assets/boySleep.jpg",
+        "/assets/events.png",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/news.svg",
+        "/assets/people.png",
+        "/assets/post.svg",
+        "/assets/posts.png",
+        "/assets/splash.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/4.143e26e35ad9ee3c4967.js": "6fe777057c7c5d5bd91ae6b26509795ef4d56bf5",
+    "/5.57e20310c6026e05f6eb.js": "4e23794e1c029834c81f6398fa1a9353e9779d38",
+    "/6.346acc39d23f51963026.js": "be115eeee50104da830b8dfac358579e091d6aea",
+    "/7.27528f60b1e54ef2d0a2.js": "08a37f1ad44c0b5ccc81bc452fd06256a4b1da4b",
+    "/assets/bean.png": "4fe67f9ff2cc00b7ab4ec39e5f47203e8a1032aa",
+    "/assets/bean1.png": "ece2e9b4393b41b4ea2ebfa765ce6f115f895088",
+    "/assets/boySleep.jpg": "c813082e7416d29dd540ccc4b1c79c73184a9692",
+    "/assets/events.png": "64a4731db9784054507a1ca14f62801efb65be38",
+    "/assets/icons/icon-128x128.png": "2fb1d2a25eeba73dd34e939e8d1a177110cc91ce",
+    "/assets/icons/icon-144x144.png": "a017d1c4b86d0c926dae330b102ed61510b74487",
+    "/assets/icons/icon-152x152.png": "8be51a1a1754d74dfab4a59dd290c93856643268",
+    "/assets/icons/icon-192x192.png": "69b8b2ee520ad2707710fcdfc71a4d0d12cf0a7f",
+    "/assets/icons/icon-384x384.png": "25ca44c1494bddf8c1d6546d6b4fe08d83979c2c",
+    "/assets/icons/icon-512x512.png": "01521892dfbf563c91f8fde6ce8ce7d4fbd4c649",
+    "/assets/icons/icon-72x72.png": "e6fb4eee1b706509d9f7f76db8bd609ed223b2da",
+    "/assets/icons/icon-96x96.png": "18617e391256f13711e6765b835469f97fdc8a67",
+    "/assets/news.svg": "bbacbccd18fe38f1b95cdba238ac2285b8a07d8a",
+    "/assets/people.png": "3d6864f0b777b78ec8768a34cb6df53a212f220d",
+    "/assets/post.svg": "10a382d361f381d04a38213c9300d7dedf5938b0",
+    "/assets/posts.png": "ec34fd1e12f4bf232a4107000c6261cb6e90b18a",
+    "/assets/splash.png": "b91bb1b2a3d5002821b2252963ebb0563873b19c",
+    "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/firebase-messaging-sw.js": "f099737f17e60bbe4b5da9120c65439834dae02f",
+    "/index.html": "414a197838fbc3dba6c810cf55dd8433b88dcd18",
+    "/main.17fe2cb3c2e9dfb032d1.js": "f15140667cba9a05b5c9c07d57d3e65fe254606e",
+    "/polyfills.c6871e56cb80756a5498.js": "ce68d153e9b9b6d26b625069c0ee99ae09c6f255",
+    "/runtime.d6e54c2710348ceb1ce8.js": "ee12502499a588533993a583c5a1948778cd591c",
+    "/scripts.dfe17c794d5054cc4112.js": "193394a8507f5e96b518432f87778b58556d501a",
+    "/styles.907c49ed899b641b03f8.css": "dfa8d146646272d2c2f26bd543af0ec75ad1155e"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+<div id="navbar">
+  <div style="display:flex;align-items: center">
+    <div id="sideNavToggle" style="padding-left: 10px;font-size:large;cursor:pointer">&#x2630;</div>
+  <div id="logo" [routerLink]="'/'" >
+    time
+  </div>
+  </div>
+  <div class="dp" (click)="detailsOpen = !detailsOpen">
+    <span><img *ngIf="user && user?.uid !== undefined" src={{user.photoURL}} height="40" width="40" alt="profile picture" style="border-radius:50%"></span>
+    <ng-container *ngIf="user && user?.uid !== undefined else showLogin">
+      <div class="dpContent" *ngIf="detailsOpen">
+      <img src={{user.photoURL}} height="60" width="60" alt="profile picture" style="border-radius:50%">
+      <div><span>{{user.displayName}}</span>
+      <div (click)="logout()" style="cursor:pointer">Logout</div>
+      </div>
+    </div>
+  </ng-container>
+    
+    
+  </div>
+</div>
+<router-outlet></router-outlet>
+
+<ng-template #showLogin>
+    <i [routerLink]="'/login'" style="cursor:pointer" mz-icon-mdi [align]="'left'" [icon]="'account-circle-outline'" [size]="'24px'"></i>
+</ng-template>
+
+<mz-sidenav
+  [id]="'sidenav-demo'"
+  [collapseButtonId]="'sideNavToggle'" [closeOnClick]="true">
+  <mz-sidenav-header style="display:flex;align-items:center;justify-content: center">
+      <span><img *ngIf="user && user?.uid !== undefined" src={{user.photoURL}} height="40" width="40" alt="profile picture" style="border-radius:50%"></span>
+      <span *ngIf="user && user?.uid !== undefined">{{user.displayName}}</span>
+      <span *ngIf="!user && user?.uid == undefined" style="border:1px solid grey;padding:10px" (click)="gotologin()">Login</span>
+  </mz-sidenav-header>
+
+    <mz-sidenav-link>
+        <a  [routerLink]="'posts'" routerLinkActive="routeActive">Posts</a>
+        <a  [routerLink]="'events'" routerLinkActive="routeActive">Events</a>
+        <a  [routerLink]="'news'" routerLinkActive="routeActive">News</a>
+      </mz-sidenav-link>
+ 
+
+</mz-sidenav>

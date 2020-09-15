@@ -1,0 +1,22 @@
+<!-- <div *ngIf="afAuth.user | async as user; else showLogin">
+    <h1>Hello {{ user.displayName }}!</h1>
+    <button (click)="logout()">Logout</button>
+  </div> -->
+  <!-- <ng-template #showLogin>
+    <p>Please login.</p>
+    <button (click)="login()">Login with Google</button>
+  </ng-template> -->
+  <div #showLogin>
+    <div class="row">
+    <div class="col s12 m12 l6 xl6">
+      <img src="assets/bean1.png" alt="boy relaxing" height="auto" width="100%">
+</div>
+<div class="col s12 m12 l6 xl6">
+  <p style="color:forestgreen;font-size: 1.5rem">Life is too short, make the most of it. Spend quality time with urself and ur mates</p>
+  <hr/>
+      <span style="font-size: 1.3rem;color:light-coral">Go ahead, post your thoughts, pass your time with meaningful content. login with google and have fun.</span>
+      <hr/>
+      <button class="btn waves-effect waves-light" (click)="login()">Login with Google</button>
+  </div>
+  </div>
+  </div>

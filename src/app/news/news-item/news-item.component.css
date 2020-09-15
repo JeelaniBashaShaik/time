@@ -1,0 +1,43 @@
+.card .card-content {
+    padding: 10px 24px 24px 24px;
+    border-radius: 0 0 2px 2px;
+}
+
+.card .card-content .card-title {
+    display: block;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+.playing {
+    border: 2px solid lightcoral;
+}
+
+.skeleton_image{
+    height:200px;
+    background-color: lightgrey; 
+    animation: pulse 1s infinite ease-in-out;
+  }
+
+  .normal_image {
+      opacity:1;
+  }
+
+
+  @keyframes pulse {
+    0%{
+    	opacity:0.3; 
+    }
+    25%{
+    	opacity:0.5; 
+    }
+    50%{
+    	opacity:0.7; 
+    }
+    75%{
+    	opacity:0.5; 
+    }
+    100%{
+    	opacity:0.3; 
+    }
+  }

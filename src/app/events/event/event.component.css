@@ -1,0 +1,15 @@
+.birthday {
+    background-image: linear-gradient(to right,#56ab2f , #a8e063);
+}
+
+.marriage {
+    background-image: linear-gradient(to right, #4568dc , #b06ab3);
+}
+
+.anniversary {
+    background-image: linear-gradient(to right,#dd5e89, #f7bb97);
+}
+
+.others {
+    background-image: linear-gradient(to right, #19547b, #ffd89b);
+}
